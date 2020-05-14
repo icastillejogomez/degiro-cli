@@ -1,0 +1,27 @@
+{
+  "name": "degiro-cli",
+  "version": "0.0.1",
+  "description": "Unofficial DeGiro CLI",
+  "main": "dist/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/icastillejogomez/degiro-cli.git"
+  },
+  "keywords": [
+    "degiro",
+    "degiro-api",
+    "degiro-cli"
+  ],
+  "author": "Ignacio F. Castillejo Gómez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/icastillejogomez/degiro-cli/issues"
+  },
+  "homepage": "https://github.com/icastillejogomez/degiro-cli#readme",
+  "devDependencies": {
+    "typescript": "^3.9.2"
+  }
+}
