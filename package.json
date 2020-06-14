@@ -1,6 +1,6 @@
 {
   "name": "degiro-cli",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Unofficial DeGiro CLI",
   "main": "./dist/main.js",
   "bin": {
@@ -37,7 +37,7 @@
   "dependencies": {
     "cli-table": "^0.3.1",
     "commander": "^5.1.0",
-    "degiro-api": "^0.1.4",
+    "degiro-api": "^0.2.3",
     "hidefile": "^3.0.0"
   }
 }
