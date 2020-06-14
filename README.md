@@ -1,6 +1,7 @@
 # degiro-cli
 Unofficial DeGiro CLI
 
+```sh
 Usage: DeGiro Command Line Interface [options] [command]
 
 DeGiro CLI provide you access to DeGiro Broker across the terminal
@@ -14,3 +15,5 @@ Commands:
   search          Search products in DeGiro
   portfolio       show account portfolio in real-time
   help [command]  display help for command
+
+```
