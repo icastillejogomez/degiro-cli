@@ -6,8 +6,7 @@ import { CredentialsType } from '../types';
 import DeGiro, { DeGiroEnums, DeGiroTypes } from 'degiro-api'
 
 program
-  .option('--type [type]', 'account username', 'all')
-  .option('-d, --show-details', 'account username', false)
+  .option('-t --text [text]', 'Text to search')
 
 program.parse(process.argv);
 
@@ -20,16 +19,17 @@ program.parse(process.argv);
   // Create DeGiro client and sign in
   const degiro = DeGiro.create({ username: username, pwd })
 
+  if (!program.text) {
+    console.error('Text must be set')
+    return process.exit(1)
+  }
+
   try {
     await degiro.login()
+    const results = await degiro.searchProduct({ text: program.text })
+    console.log(results)
   } catch (error) {
     console.error(`error: ${error}`)
   }
-
-  const portfolio = await degiro.getPortfolio({
-    type: program.type,
-    getProductDetails: program.showDetails,
-  })
-  console.table(portfolio)
 
 })()

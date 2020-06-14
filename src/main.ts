@@ -10,6 +10,7 @@ program
 
 program
   .command('login', 'validate credentials with DeGiro platform', { executableFile: 'subcommands/login' })
+  .command('search', 'Search products in DeGiro', { executableFile: 'subcommands/search' })
   .command('portfolio', 'show account portfolio in real-time', { executableFile: 'subcommands/portfolio' })
 
 program.parse(process.argv);

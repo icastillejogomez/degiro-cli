@@ -49,10 +49,10 @@ commander@^5.1.0:
   resolved "https://registry.yarnpkg.com/commander/-/commander-5.1.0.tgz#46abbd1652f8e059bddaef99bbdcb2ad9cf179ae"
   integrity sha512-P0CysNDQ7rtVw4QIQtm+MRxV66vKFSvlsQvGYXZWR3qFU0jlMKHZZZgw8e+8DSah4UDKMqnknRDQz+xuQXQ/Zg==
 
-degiro-api@^0.1.4:
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/degiro-api/-/degiro-api-0.1.4.tgz#5bd1df68c751398aadaa5ba60571ee2049d12e90"
-  integrity sha512-Jzh3zQ2ydmMrPGuvf410tqVSx5abJyQ0s43rzXmNQsg+K1ajhHCPbBCjQ0AbboO9EkS/s9XqRXCZ6v7HLspZWw==
+degiro-api@^0.2.3:
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/degiro-api/-/degiro-api-0.2.3.tgz#b6c32920fb94b0cc688766bcd3379edff48a1928"
+  integrity sha512-sUznGlE+48HkUK2dwKMVPh3JGitcatGzHX4p7kih0V1KZOG78A8pgqKiRdye02B8Y4ge1BUwDY2GrBnDb3ttQA==
   dependencies:
     async "^3.2.0"
     node-fetch "^2.6.0"

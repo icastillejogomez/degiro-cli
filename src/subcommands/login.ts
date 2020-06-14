@@ -3,12 +3,11 @@
 // Import modules
 import { program } from 'commander'
 import { saveCredentials } from '../util'
-let DeGiro = require('degiro-api').default
+import DeGiro, { DeGiroEnums, DeGiroTypes } from 'degiro-api'
 
- 
 program
   .option('-u, --username <username>', 'account username')
-  .option('-p, --password [username]', 'account username')
+  .option('-p, --password [password]', 'account password')
   .option('-s, --save', 'save credentials')
   .option('-2fa [2fa]', 'second factor authentication')
 
