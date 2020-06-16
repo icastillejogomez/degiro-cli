@@ -1,15 +1,15 @@
 {
   "name": "degiro-cli",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "description": "Unofficial DeGiro CLI",
-  "main": "./dist/main.js",
+  "main": "./lib/main.js",
   "bin": {
-    "degiro": "./dist/main.js"
+    "degiro": "./lib/main.js"
   },
   "preferGlobal": true,
   "scripts": {
-    "start": "node dist/main.js",
-    "compile": "rm -fr dist && tsc",
+    "start": "node lib/main.js",
+    "build": "rm -fr lib && tsc",
     "lint": "tslint --project tsconfig.json 'src/**/*.ts'"
   },
   "repository": {
