@@ -3,5 +3,5 @@ import { getCredentials } from './getCredentials'
 
 export {
   saveCredentials,
-  getCredentials
+  getCredentials,
 }

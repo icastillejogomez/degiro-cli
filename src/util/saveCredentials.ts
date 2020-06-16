@@ -5,7 +5,7 @@ import os from 'os'
 import fs from 'fs'
 
 // Import types
-import { CredentialsType } from "../types";
+import { CredentialsType } from '../types'
 
 const toBase64 = (str: string): string => Buffer.from(str).toString('base64')
 
@@ -15,7 +15,7 @@ export const saveCredentials = (credentials: CredentialsType) => {
 
   // Check credentials file
   const cliFolder: string = path.join(os.homedir(), '.degiro')
-  
+
   // Check if cli folder exists
   if (!fs.existsSync(cliFolder)) {
     fs.mkdirSync(cliFolder)
@@ -29,4 +29,5 @@ export const saveCredentials = (credentials: CredentialsType) => {
   }
   fs.writeFileSync(credentialsFile, toBase64(JSON.stringify(credentials)))
 
+  return credentialsFile
 }

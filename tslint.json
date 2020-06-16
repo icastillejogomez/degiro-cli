@@ -1,0 +1,26 @@
+{
+    "defaultSeverity": "error",
+    "extends": "tslint-config-airbnb",
+    "jsRules": {},
+    "linterOptions": {
+      "exclude": [
+          "src/main.ts"
+      ]
+    },
+    "rules": {
+        "eofline": false,
+        "semicolon":false,
+        "import-name": [false, "ignore-modules"],
+        "no-increment-decrement": false,
+        "max-line-length": [
+            true,
+            {
+              "limit": 200,
+              "ignore-pattern": "^import |^export {(.*?)}",
+              "check-strings": true,
+              "check-regex": true
+            }
+          ]
+    },
+    "rulesDirectory": []
+}

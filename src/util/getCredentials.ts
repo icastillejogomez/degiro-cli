@@ -5,7 +5,7 @@ import os from 'os'
 import fs from 'fs'
 
 // Import types
-import { CredentialsType } from "../types";
+import { CredentialsType } from '../types'
 
 const fromBase64 = (str: string): string => Buffer.from(str, 'base64').toString('ascii')
 

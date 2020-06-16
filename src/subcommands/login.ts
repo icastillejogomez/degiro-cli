@@ -3,7 +3,7 @@
 // Import modules
 import { program } from 'commander'
 import { saveCredentials } from '../util'
-import DeGiro, { DeGiroEnums, DeGiroTypes } from 'degiro-api'
+import DeGiro from 'degiro-api'
 
 program
   .option('-u, --username <username>', 'account username')
@@ -13,7 +13,9 @@ program
 
 program.parse(process.argv)
 
-if (!program.username) {
+const username = program.username || process.env.DEGIRO_USER
+
+if (!username) {
   console.error('error: username is a must')
   process.exit(1)
 }
@@ -24,11 +26,10 @@ if (!pwd) {
   process.exit(1)
 }
 
-
 // Main async function
 (async () => {
   // Create DeGiro client and sign in
-  const degiro = DeGiro.create({ username: program.username, pwd })
+  const degiro = DeGiro.create({ username, pwd })
 
   try {
     await degiro.login()
@@ -41,6 +42,7 @@ if (!pwd) {
   if (!program.save) process.exit(0)
 
   // Save credentials
-  saveCredentials({ username: program.username, pwd })
+  const credentialsFilePath = saveCredentials({ username, pwd })
+  console.log(`Credentials saved in ${credentialsFilePath}`)
 
 })()

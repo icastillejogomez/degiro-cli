@@ -2,7 +2,7 @@
 
 import { program } from 'commander'
 import { getCredentials } from '../util'
-import { CredentialsType } from '../types';
+import { CredentialsType } from '../types'
 import DeGiro, { DeGiroEnums, DeGiroTypes } from 'degiro-api'
 
 program
@@ -17,7 +17,7 @@ program.parse(process.argv);
   const { username, pwd } = credentials
 
   // Create DeGiro client and sign in
-  const degiro = DeGiro.create({ username: username, pwd })
+  const degiro = DeGiro.create({ username, pwd })
 
   if (!program.text) {
     console.error('Text must be set')

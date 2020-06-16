@@ -9,8 +9,10 @@
   "preferGlobal": true,
   "scripts": {
     "start": "node bin/main.js",
-    "build": "rm -fr bin && tsc && chmod +x bin/main.js",
-    "lint": "tslint --project tsconfig.json 'src/**/*.ts'"
+    "build": "rm -fr bin && tsc",
+    "make-executable": "chmod +x bin/main.js",
+    "lint": "tslint --project tsconfig.json 'src/**/*.ts'",
+    "pre-commit": "yarn lint && yarn build && yarn make-executable"
   },
   "repository": {
     "type": "git",
